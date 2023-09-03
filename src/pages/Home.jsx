@@ -10,6 +10,8 @@ const Home = () => {
     const [inputValue, setInputValue] = useState('')
     const [accessToken, setAccessToken] = useState('');
     const [spotifyURL, setSpotifyURL] = useState('');
+    const [dropdownMenu, setDropdownMenu] = useState(false);
+    const [selectedOption, setSelectedOption] = useState('click me');
 
     useEffect(() => {
         var authParameters = {
@@ -36,9 +38,35 @@ const Home = () => {
     //         .then(data => setSpotifyURL(data.external_urls.spotify))
     // }
 
+    // const handleKeyDown = (event) => {
+    //     if (event.key === 'Enter') {
+    //         getArtist();
+    //     }
+    // }
+
+    const handleOptionClick = (option) => {
+        setSelectedOption(option);
+        setDropdownMenu(false); // Close the dropdown after selection
+      };
+
     const handleKeyDown = (event) => {
-        if (event.key === 'Enter') {
-            getArtist();
+        if (event.key === 'Enter' && selectedOption === 'happy') {
+            navigate('/Happy')
+        }
+        else if (event.key === 'Enter' && selectedOption === 'sad') {
+            navigate('/Sad')
+        }
+        else if (event.key === 'Enter' && selectedOption === 'calm') {
+            navigate('/Calm')
+        }
+        else if (event.key === 'Enter' && selectedOption === 'adventurous') {
+            navigate('/Adventurous')
+        }
+        else if (event.key === 'Enter' && selectedOption === 'energized') {
+            navigate('/Energized')
+        }
+        else if (event.key === 'Enter' && selectedOption === 'in love') {
+            navigate('/InLove')
         }
     }
 
@@ -46,25 +74,21 @@ const Home = () => {
         <div className="container">
             <video src='/videos/background1.mp4' autoPlay loop muted />
             <h1 className='title'>i am feeling </h1>
-            <div className='dropdown'>
-                <select name="mood" id="mood">
-                    <option value="happy">happy</option>
-                    <option value="sad">sad</option>
-                    <option value="calm" >calm</option>
-                    <option value="energized" >energized</option>
-                </select>
+            <div className='dropdown' onKeyDown={handleKeyDown} tabIndex={0}>
+                <div className='dropdown-button' onClick={(e) => setDropdownMenu(!dropdownMenu)}>
+                {selectedOption && <p>{selectedOption}</p>}
+                </div>
+                {dropdownMenu && (
+                <div className='dropdown-menu'>
+                    <div className='option' onClick={() => handleOptionClick('happy')}>happy</div>
+                    <div className='option' onClick={() => handleOptionClick('sad')}>sad</div>
+                    <div className='option' onClick={() => handleOptionClick('calm')}>calm</div>
+                    <div className='option' onClick={() => handleOptionClick('adventurous')}>adventurous</div>
+                    <div className='option' onClick={() => handleOptionClick('energized')}>energized</div>
+                    <div className='option' onClick={() => handleOptionClick('in love')}>in love</div>
+                </div>
+                )}
             </div>
-
-            {/* <div className="searchbar">
-                <input
-                    className="center"
-                    type="text"
-                    value={inputValue}
-                    placeholder="how are you feeling today?"
-                    onChange={(e) => setInputValue(e.target.value)}
-                    onKeyDown={handleKeyDown}
-                />
-            </div> */}
         </div>
     )
 }

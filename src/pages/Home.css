@@ -26,33 +26,56 @@ video {
 }
 
 .dropdown {
-    /* border: 1px solid black;
-    border-radius: 10px; */
-    display: flex;
-    justify-content: center;
+    /* border: 1px solid black; */
+    width: 300px;
     align-items: center;
-    width: 250px;
 }
 
-.dropdown select {
-    border-radius: 50px;
-    width: 200px;
-    height: 50px;
+.dropdown-button {
+    border: 1px solid #d88cce;
+    border-radius: 30px;
     font-size: 30px;
+    cursor: default;
+    font-family: 'Overpass Mono', monospace;
     text-align: center;
-    font-family: 'Overpass Mono', monospace;
-    appearance: none; 
+    width: 220px;
+    height: 50px;
+    line-height: 0;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    box-shadow: 3px 3px 10px 3px #d88cce;
+    color: #d88cce;
 }
 
-.dropdown select-option {
-    font-family: 'Overpass Mono', monospace;
-    border-radius: 200px; /* Rounded corners for individual options */
+.dropdown-button:hover{
+    width: 225px;
+    height: 53px;
 }
 
-/* Style the dropdown arrow */
-.dropdown select::-ms-expand {
-    display: none; /* Hide the default arrow in IE */
+.dropdown-menu {
+    margin-top: 10px;
+    cursor: default;
+    border: 3px solid aliceblue;
+    font-size: 30px;
+    width: 220px;
+    text-align: center;
+    position: absolute;
+    height: 300px;
+    border-radius: 10px;
+    margin-left: 15px;
 }
+
+.option {
+    margin-top: 18px;
+    color: #d88cce;
+    font-family: 'Overpass Mono', monospace;
+    font-size: 23px;
+}
+
+.option:hover {
+    font-size: 30px;
+}
+
 
 /* .searchbar {
     display: flex;
