@@ -44,7 +44,8 @@ const Home = () => {
 
     return (
         <div className="container">
-            <h1 className='title'>i am feeling: </h1>
+            <video src='/videos/background1.mp4' autoPlay loop muted />
+            <h1 className='title'>i am feeling </h1>
             <div className='dropdown'>
                 <select name="mood" id="mood">
                     <option value="happy">happy</option>

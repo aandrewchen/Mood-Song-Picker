@@ -3,21 +3,55 @@ body {
     background-color: #CABDE4;
 }
 
+video {
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    border: 1px solid black;
 }
 
 .title {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: #F5F5FA;
+    font-family: 'Overpass Mono', monospace;
+    color: #d88cce;
     font-size: 40px;
+}
+
+.dropdown {
+    /* border: 1px solid black;
+    border-radius: 10px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+}
+
+.dropdown select {
+    border-radius: 50px;
+    width: 200px;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Overpass Mono', monospace;
+    appearance: none; 
+}
+
+.dropdown select-option {
+    font-family: 'Overpass Mono', monospace;
+    border-radius: 200px; /* Rounded corners for individual options */
+}
+
+/* Style the dropdown arrow */
+.dropdown select::-ms-expand {
+    display: none; /* Hide the default arrow in IE */
 }
 
 /* .searchbar {
