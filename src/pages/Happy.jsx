@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 const CLIENT_ID = "ad2fcb1b0c354f51abf0b4462f76f0ef";
-const CLIENT_SECRET = "7231bd716c85421191380487104dff91";
+const CLIENT_SECRET = "39f54d332dbe4735a6e9f72802078959";
 
 const Happy = () => {
   const [accessToken, setAccessToken] = useState('');
