@@ -8,7 +8,7 @@ const Card = ({ song }) => {
         <img src={song.track.album.images[0].url} />
       </div>
       <div className='card-title'>
-        {song.track.name}
+        {song.track.artists[0].name} - {song.track.name}
       </div>
     </div>
   )

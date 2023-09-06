@@ -35,7 +35,7 @@ const Happy = () => {
             'Authorization': 'Bearer ' + accessToken
         }
     }
-    var returnedPlaylistData = await fetch('https://api.spotify.com/v1/playlists/37i9dQZF1DX3rxVfibe1L0?fields=tracks.items.track(album.images,external_urls,name,id)', authParameters)
+    var returnedPlaylistData = await fetch('https://api.spotify.com/v1/playlists/37i9dQZF1DX3rxVfibe1L0?fields=tracks.items.track(album.images,external_urls,name,id,artists)', authParameters)
         .then(result => result.json())
         // .then(data => console.log(data))
         .then(data => setSongs(data.tracks.items))
@@ -52,7 +52,7 @@ const Happy = () => {
       <h1 className="title">Happy Songs</h1>
       {songs && (
         <div className="songs-container">
-          {songs.map((song) => (
+          {songs.slice(0,5).map((song) => (
             <Card key={song.track.id} song={song} />
           ))}
         </div>
