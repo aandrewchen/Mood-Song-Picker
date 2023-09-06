@@ -1,6 +1,18 @@
 .title {
-    color: black;
+    color: #d88cce;
     font-size: 45px;
+    font-family: 'Overpass Mono', monospace;
+    text-align: center;
+}
+
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover; /* Scale the video to cover the entire viewport */
+    z-index: -1; /* Place it behind other content */
 }
 
 .songs-container {

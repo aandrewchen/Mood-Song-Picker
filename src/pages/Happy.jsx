@@ -49,6 +49,7 @@ const Happy = () => {
 
   return (
     <div>
+      <video src='/videos/background1.mp4' autoPlay loop muted />
       <h1 className="title">Happy Songs</h1>
       {songs && (
         <div className="songs-container">
