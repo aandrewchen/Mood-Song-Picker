@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import Card from '../components/card';
-import './Happy.css'
+import './Mood.css'
 
 const CLIENT_ID = "ad2fcb1b0c354f51abf0b4462f76f0ef";
 const CLIENT_SECRET = "39f54d332dbe4735a6e9f72802078959";
