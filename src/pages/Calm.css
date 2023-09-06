@@ -1,0 +1,54 @@
+.card-container {
+    border: 10px solid rgb(255, 255, 255);
+    height: 300px;
+    width: 250px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    background-color: white;
+    overflow: hidden;
+}
+
+.card-container:hover {
+    height: 310px;
+    width: 260px;
+}
+
+img {
+    height: 225px;
+    width: 250px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.card-container:hover img {
+    height: 235px;
+    width: 260px;
+}
+
+.card-image-container {
+    /* border: 1px solid black; */
+    height: 225px;
+    width: 250px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.card-title {
+    font-family: 'Overpass Mono', monospace;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 30px;
+    height: 75px;
+    width: 250px;
+    background-color: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+}
+
+.card-container:hover .card-title {
+    height: 85px;
+    width: 260px;
+}
