@@ -1,7 +1,7 @@
 import React from 'react'
 import { useRoutes } from 'react-router-dom'
 import Home from './pages/Home'
-import Happy from './pages/Happy'
+import Mood from './pages/Mood'
 // import Calm from './pages/Calm'
 // import Sad from './pages/Sad'
 // import Adventurous from './pages/Adventurous'
@@ -16,7 +16,7 @@ function App() {
     },
     {
       path: "/:titleMood/:playlistID",
-      element: <Happy />
+      element: <Mood />
     }
   ])
 
