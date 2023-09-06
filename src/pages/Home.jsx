@@ -36,7 +36,7 @@ const Home = () => {
     return (
         <div className="container">
             <video src='/videos/background1.mp4' autoPlay loop muted />
-            <h1 className='title'>i am feeling </h1>
+            <h1 className='home-title'>i am feeling </h1>
             <div className='dropdown' onKeyDown={handleKeyDown} tabIndex={0}>
                 <div className='dropdown-button' onClick={(e) => setDropdownMenu(!dropdownMenu)}>
                 {selectedOption && <p>{selectedOption}</p>}
