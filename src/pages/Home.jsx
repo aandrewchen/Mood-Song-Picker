@@ -14,23 +14,30 @@ const Home = () => {
 
     const handleKeyDown = (event) => {
         if (event.key === 'Enter' && selectedOption === 'happy') {
-            navigate('/Happy')
+            var playlistID = '37i9dQZF1DX3rxVfibe1L0'
+            var titleMood = 'Happy'
         }
         else if (event.key === 'Enter' && selectedOption === 'sad') {
-            navigate('/Sad')
+            var playlistID = '37i9dQZF1DX7qK8ma5wgG1'
+            var titleMood = 'Sad'
         }
         else if (event.key === 'Enter' && selectedOption === 'calm') {
-            navigate('/Calm')
+            var playlistID = '37i9dQZF1DX7GTqMQDhOum'
+            var titleMood = 'Calm'
         }
-        else if (event.key === 'Enter' && selectedOption === 'adventurous') {
-            navigate('/Adventurous')
+        else if (event.key === 'Enter' && selectedOption === 'dreamy') {
+            var playlistID = '37i9dQZF1DX2PQDq3PdrHQ'
+            var titleMood = 'Dreamy'
         }
         else if (event.key === 'Enter' && selectedOption === 'energized') {
-            navigate('/Energized')
+            var playlistID = '37i9dQZF1DX0XUsuxWHRQd'
+            var titleMood = 'Energized'
         }
-        else if (event.key === 'Enter' && selectedOption === 'in love') {
-            navigate('/InLove')
+        else if (event.key === 'Enter' && selectedOption === 'romantic') {
+            var playlistID = '37i9dQZF1DX7rOY2tZUw1k'
+            var titleMood = 'Romantic'
         }
+        navigate('/' + titleMood + '/' + playlistID)
     }
 
     return (
@@ -46,9 +53,9 @@ const Home = () => {
                     <div className='option' onClick={() => handleOptionClick('happy')}>happy</div>
                     <div className='option' onClick={() => handleOptionClick('sad')}>sad</div>
                     <div className='option' onClick={() => handleOptionClick('calm')}>calm</div>
-                    <div className='option' onClick={() => handleOptionClick('adventurous')}>adventurous</div>
+                    <div className='option' onClick={() => handleOptionClick('dreamy')}>dreamy</div>
                     <div className='option' onClick={() => handleOptionClick('energized')}>energized</div>
-                    <div className='option' onClick={() => handleOptionClick('in love')}>in love</div>
+                    <div className='option' onClick={() => handleOptionClick('romantic')}>romantic</div>
                 </div>
                 )}
             </div>

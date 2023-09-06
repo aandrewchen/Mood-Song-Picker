@@ -22,7 +22,8 @@ video {
     align-items: center;
     font-family: 'Overpass Mono', monospace;
     color: #d88cce;
-    font-size: 40px;
+    font-size: 38px;
+    font-weight: 800;
 }
 
 .dropdown {
@@ -35,6 +36,7 @@ video {
     border: 1px solid #d88cce;
     border-radius: 30px;
     font-size: 30px;
+    font-weight: 800;
     cursor: default;
     font-family: 'Overpass Mono', monospace;
     text-align: center;
