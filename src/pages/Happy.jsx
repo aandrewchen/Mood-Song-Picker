@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import Card from '../components/card';
+import './Happy.css'
 
 const CLIENT_ID = "ad2fcb1b0c354f51abf0b4462f76f0ef";
 const CLIENT_SECRET = "39f54d332dbe4735a6e9f72802078959";
@@ -33,7 +35,7 @@ const Happy = () => {
             'Authorization': 'Bearer ' + accessToken
         }
     }
-    var returnedPlaylistData = await fetch('https://api.spotify.com/v1/playlists/37i9dQZF1DX3rxVfibe1L0?fields=tracks.items.track(album.images,external_urls,name)', authParameters)
+    var returnedPlaylistData = await fetch('https://api.spotify.com/v1/playlists/37i9dQZF1DX3rxVfibe1L0?fields=tracks.items.track(album.images,external_urls,name,id)', authParameters)
         .then(result => result.json())
         // .then(data => console.log(data))
         .then(data => setSongs(data.tracks.items))
@@ -47,7 +49,14 @@ const Happy = () => {
 
   return (
     <div>
-      <h1>Happy Songs</h1>
+      <h1 className="title">Happy Songs</h1>
+      {songs && (
+        <div className="songs-container">
+          {songs.map((song) => (
+            <Card key={song.track.id} song={song} />
+          ))}
+        </div>
+      )}
     </div>
 
   )

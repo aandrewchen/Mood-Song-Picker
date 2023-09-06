@@ -1,9 +1,17 @@
 import React from 'react'
+import './Card.css'
 
-function card() {
+const Card = ({ song }) => {
   return (
-    <div>card</div>
+    <div className='card-container'>
+      <div className='card-image-container'>
+        <img src={song.track.album.images[0].url} />
+      </div>
+      <div className='card-title'>
+        {song.track.name}
+      </div>
+    </div>
   )
 }
 
-export default card
+export default Card
